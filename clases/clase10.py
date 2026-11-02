@@ -68,18 +68,23 @@ def mostrar_bienvenida(n):
 # mostrar_bienvenida(input("Ingresa tu nombre"))
 # print(mostrar_bienvenida(input("Ingresa tu nombre")))
 
-def sumar_precios(precios:list) -> int | float:
+def sumar_precios(precios:list=[]) -> int | float:
     """
+    Sumamos todos los precios que recolectamos
+
+    Args:
+        precios (list): una lista de numeros.
     """
     
     total = 0
     for precio in precios:
-        
         total = total + precio
     return total
 
-print(sumar_precios(["1500","1000","500"]))
-
+print(sumar_precios([1500,1000,500]))
+help(sumar_precios)
+print(sumar_precios.__doc__)
+# sumar_precios()
 # def calcular_area_y_perimetro(base, altura):
 #     area = base * altura
 #     perimetro = 2 * (base + altura)
@@ -102,48 +107,48 @@ print(sumar_precios(["1500","1000","500"]))
 
 # print(type(primer_dato))
 
-help(print())
+# help(print())
 
-"""
+# """
 
-"""
-# laskjdlaskjdsakl
-def calcular_iva(monto):
-    """ Devuelve el IVA (21%) de un monto """
-    return monto * 0.21
+# """
+# # laskjdlaskjdsakl
+# def calcular_iva(monto):
+#     """ Devuelve el IVA (21%) de un monto """
+#     return monto * 0.21
 
-# help(calcular_iva)
-# print(calcular_iva.__doc__)
-calcular_iva()
+# # help(calcular_iva)
+# # print(calcular_iva.__doc__)
+# calcular_iva()
 
-def saludar(nombre):
-    """
-    Esta función saluda a la persona pasada como parámetro.
+# def saludar(nombre):
+#     """
+#     Esta función saluda a la persona pasada como parámetro.
     
-    Parámetros:
-    nombre (str): El nombre de la persona a saludar.
+#     Parámetros:
+#     nombre (str): El nombre de la persona a saludar.
     
-    Retorna:
-    str: El saludo personalizado.
-    """
-    return f"¡Hola, {nombre}!"
+#     Retorna:
+#     str: El saludo personalizado.
+#     """
+#     return f"¡Hola, {nombre}!"
 
-def calcular_total(precio:int | float, cantidad:int, descuento:int=0) -> int | float :
-    """
-    Calcula el total a pagar de un producto.
-    Aplica el descuento (en porcentaje) sobre el subtotal y después suma
-    el IVA del 21%.
+# def calcular_total(precio:int | float, cantidad:int, descuento:int=0) -> int | float :
+#     """
+#     Calcula el total a pagar de un producto.
+#     Aplica el descuento (en porcentaje) sobre el subtotal y después suma
+#     el IVA del 21%.
 
-    Args:
-        precio (int | float): precio unitario del producto.
-        cantidad (int): unidades compradas.
-        descuento (int): porcentaje de descuento de 0 a 100. Por defecto 0.
+#     Args:
+#         precio (int | float): precio unitario del producto.
+#         cantidad (int): unidades compradas.
+#         descuento (int): porcentaje de descuento de 0 a 100. Por defecto 0.
 
-    Returns:
-        El total a pagar .
-    """
-    subtotal = precio * cantidad
-    con_descuento = subtotal - subtotal * descuento / 100
-    return con_descuento * 1.21
+#     Returns:
+#         El total a pagar .
+#     """
+#     subtotal = precio * cantidad
+#     con_descuento = subtotal - subtotal * descuento / 100
+#     return con_descuento * 1.21
 
-calcular_total()
+# calcular_total()

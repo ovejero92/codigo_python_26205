@@ -1,0 +1,2 @@
+python -m pip --version  # verifica que pip existe
+python -m pip install 
